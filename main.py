@@ -31,6 +31,10 @@ def main():
         for obj in updatable_group:
             obj.update(dt)
 
+        for asteroid in asteroids:
+            if asteroid.collides_with(player):
+                exit("Game Over!!")
+    
         screen.fill("black")
 
         for obj in drawable_group:
